@@ -15,3 +15,10 @@ func main() {
 	deckSize := len(deck)
 	fmt.Println(deckSize)
 }
+
+func checkSuitSize(s suit) bool{
+	if(len(suit) == 13){
+		return true	
+	}
+	return false
+}
