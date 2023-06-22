@@ -7,7 +7,7 @@ func main() {
 	diamonds := SuitBuilder("Diamonds")
 	hearts := SuitBuilder("Hearts")
 	spades := SuitBuilder("Spades")
-	var suitChecker int = 0
+	var suitChecker int 
 	if checkSuitSize(clubs)
 		suitChecker++
 	if checkSuitSize(diamonds)
@@ -18,13 +18,15 @@ func main() {
 		suitChecker++
 
 	var deck Deck
+
+	err := (suitChecker != 4)
 	
-	if (suitChecker == 4) {
-		suits := []suit{clubs, diamonds, hearts, spades}
-		deck = DeckBuilder(suits)
+	if (err) {
+		fmt.Println("Suits size are not valid")
 	}
 	else {
-		fmt.Println("Suits size are not valid")
+		suits := []suit{clubs, diamonds, hearts, spades}
+		deck = DeckBuilder(suits)
 	}
 	
 	if checkDeckSize(deck)
